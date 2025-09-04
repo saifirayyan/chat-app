@@ -27,6 +27,9 @@ app.use(
 app.use('/api/auth', authRoutes);
 app.use('/api/messages', messageRoutes);
 
+app.get('/', (req, res) => {
+  res.send('server is live');
+});
 
 // Start server
 if(process.env.NODE_ENV !== 'production'){
