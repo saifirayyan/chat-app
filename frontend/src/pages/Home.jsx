@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar';
 import NoChatSelected from '../components/NoChatSelected';
 import ChatContainer from '../components/ChatContainer';
 import { useAuthStore } from '../store/useAuthStore';
-import { SidebarClose, SidebarOpen } from 'lucide-react';
+import { SidebarOpen } from 'lucide-react';
 
 const Home = () => {
   const [showSidebar, setShowSidebar] = useState(false)

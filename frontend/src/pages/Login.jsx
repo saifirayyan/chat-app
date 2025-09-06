@@ -18,10 +18,10 @@ const Login = () => {
   };
 
   return (
-    <div className="pt-10 h-screen grid lg:grid-cols-2">
+    <div className="pt-20 h-screen grid lg:grid-cols-2">
       {/* Left Side - Form */}
-      <div className="flex flex-col justify-center items-center p-6 sm:p-12">
-        <div className="w-full max-w-md space-y-8">
+      <div className="flex flex-col justify-start sm:justify-center items-center p-6 sm:p-12">
+        <div className="w-full max-w-md space-y-8 max-sm:mt-10">
           {/* Logo */}
           <div className="text-center mb-8">
             <div className="flex flex-col items-center gap-2 group">

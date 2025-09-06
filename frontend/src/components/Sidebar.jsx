@@ -4,7 +4,7 @@ import SidebarSkeleton from './skeleton/SidebarSkeleton';
 import { Users, X } from 'lucide-react';
 import { useAuthStore } from '../store/useAuthStore';
 
-const Sidebar = ({setShowSidebar, showSidebar, styles=""}) => {
+const Sidebar = ({setShowSidebar, showSidebar}) => {
     
     const { users, getUsers, selectedUser, setSelectedUser, isUserLoading, unread, getUnreadCounts } = useChatStore();
     const {onlineUsers, authUser} = useAuthStore();
@@ -53,7 +53,10 @@ const Sidebar = ({setShowSidebar, showSidebar, styles=""}) => {
             {filteredUsers.map((user) => (
                 <button
                   key={user._id}
-                  onClick={() => setSelectedUser(user)}
+                  onClick={() => {
+                    showSidebar(false);
+                    setSelectedUser(user);
+                  }}
                   className={`
                     w-full p-3 flex items-center gap-3 hover:bg-base-300 transition-colors
                     ${selectedUser?._id === user?._id? "bg-base-300 ring-1 ring-base-300" : ""}
