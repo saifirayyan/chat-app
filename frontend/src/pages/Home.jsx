@@ -23,11 +23,11 @@ const Home = () => {
   },[selectedUser]);
 
   return (
-    <div className='h-[100dvh-60px] bg-base-200'>
+    <div className='h-[100dvh] bg-base-200'>
       <div className="flex items-center justify-center pt-20 px-4">
-        <div className="bg-base-100 rounded-lg shadow-xl w-full max-w-6xl sm:h-[calc(100vh-6rem)] h-[calc(100dvh-8rem)] shrink">
+        <div className="bg-base-100 rounded-lg shadow-xl w-full max-w-6xl h-[calc(100dvh-6rem)]">
           <div className="max-sm:relative flex h-full rounded-lg overflow-hidden">
-            {!showSidebar && (<button className='absolute top-4 left-4 z-100 btn btn-square btn-ghost btn-sm sm:hidden' onClick={() => setShowSidebar(true)}>
+            {!showSidebar && (<button className='absolute top-4 left-4 z-50 btn btn-square btn-ghost btn-sm sm:hidden' onClick={() => setShowSidebar(true)}>
               <SidebarOpen className='text-primary size-5 font-medium'  />
             </button>) }
               <Sidebar setShowSidebar={setShowSidebar} showSidebar={showSidebar} />
