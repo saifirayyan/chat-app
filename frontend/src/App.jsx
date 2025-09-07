@@ -27,7 +27,7 @@ const App = () => {
   }
 
   return (
-    <div data-theme={theme}>
+    <div data-theme={theme} className="bg-base-200 h-screen">
       <Navbar />
       <Routes>
         <Route path="/" element={ authUser ? <Home /> : <Navigate to={"/login"} /> } />
